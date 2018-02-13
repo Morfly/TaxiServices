@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!--adb shell am start -a android.intent.action.VIEW -d "example://gizmos"-->
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -47,6 +49,10 @@
                     android:host="redirect"
                     android:scheme="com.morfly.redirecturitest" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".controllers.lyft.LyftLoginActivity"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 

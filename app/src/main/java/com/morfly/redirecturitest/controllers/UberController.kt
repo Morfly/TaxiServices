@@ -1,8 +1,8 @@
 package com.morfly.redirecturitest.controllers
 
+import android.app.Activity
 import android.content.Intent
 import android.widget.Toast
-import com.morfly.redirecturitest.MainActivity
 import com.morfly.redirecturitest.TaxiService
 import com.uber.sdk.android.core.auth.AccessTokenManager
 import com.uber.sdk.android.core.auth.AuthenticationError
@@ -23,7 +23,7 @@ import java.util.*
 /**
  * Created by Alex on 2/12/18.
  */
-class UberController(var activity: MainActivity) : TaxiService {
+class UberController(var activity: Activity) : TaxiService {
 
     private lateinit var accessTokenStorage: AccessTokenManager
     private lateinit var loginManager: LoginManager
