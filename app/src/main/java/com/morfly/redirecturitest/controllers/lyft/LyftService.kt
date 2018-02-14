@@ -27,6 +27,11 @@ interface LyftService {
             @Query("end_time") endTime: String,
             @Query("limit") limit: String): Call<UserRidesHistory>
 
+    @GET("/v1/rides")
+    fun userRidesHistory(
+            @Header("Authorization:") accessToken: String,
+            @Query("start_time") startTime: String): Call<UserRidesHistory>
+
     @POST("/oauth/token")
     fun refreshToken(
             @Header("Basic ") base64ClientIdSecret: String,
